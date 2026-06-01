@@ -55,12 +55,6 @@ sudo apt update
 sudo apt install ffmpeg
 ```
 
-## 安装环境依赖
-```bash
-pip install -r requirements.txt
-```
-
-## 二维路径规划算法测试
 ---
 
 ## 2. 项目结构
@@ -102,7 +96,6 @@ pip install -r requirements.txt
     --init_method "$INIT_METHOD" \
     --opt_method "$OPT_METHOD" \
     --waypoints "$WAYPOINTS"
-# example: ./scripts/path_planning.sh --init_method dijkstra --opt_method penalty --waypoints 150
 ```
 
 ### 3.1 支持的初始化方法
@@ -116,13 +109,7 @@ straight / dijkstra / a_star / rrt / genetic / aco
 ```text
 penalty / sqp
 ```
-| 参数 | 含义 | 可选 |
-|---|---|---|
-| `--init_method` | 初始路径规划算法 | `straight / dijkstra / a_star / rrt / genetic / aco` |
-| `--opt_method` | 数值优化算法 | `penalty / sqp` |
-| `--output-dir` | 输出目录 | `results/ & video/` |
 
-## 三维路径规划算法测试
 ### 3.3 示例
 
 ```bash
