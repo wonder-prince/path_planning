@@ -1,0 +1,306 @@
+{
+  "config": {
+    "start": [
+      0.0,
+      0.0,
+      50.0
+    ],
+    "goal": [
+      500.0,
+      420.0,
+      80.0
+    ],
+    "obstacles": [
+      [
+        120.0,
+        100.0,
+        40.0,
+        45.0
+      ],
+      [
+        240.0,
+        180.0,
+        70.0,
+        60.0
+      ],
+      [
+        330.0,
+        300.0,
+        50.0,
+        55.0
+      ],
+      [
+        410.0,
+        360.0,
+        80.0,
+        50.0
+      ],
+      [
+        300.0,
+        200.0,
+        60.0,
+        35.0
+      ]
+    ],
+    "n_segments": 20,
+    "drone_radius_m": 1.0,
+    "safety_margin_m": 5.0,
+    "dt_s": 4.085511748851054,
+    "total_time_s": 81.71023497702109
+  },
+  "practical_constraints": {
+    "no_fly_zones": [
+      {
+        "center": [
+          80.0,
+          350.0,
+          0.0
+        ],
+        "radius_m": 60.0,
+        "min_z_m": 0.0,
+        "max_z_m": 150.0,
+        "label": "Airport A"
+      },
+      {
+        "center": [
+          400.0,
+          100.0,
+          0.0
+        ],
+        "radius_m": 40.0,
+        "min_z_m": 0.0,
+        "max_z_m": 80.0,
+        "label": "Stadium B"
+      }
+    ],
+    "gps_coverage_zones": [
+      {
+        "center": [
+          250.0,
+          250.0,
+          0.0
+        ],
+        "radius_m": 80.0,
+        "hdop_factor": 4.5
+      },
+      {
+        "center": [
+          350.0,
+          400.0,
+          0.0
+        ],
+        "radius_m": 50.0,
+        "hdop_factor": 3.0
+      }
+    ],
+    "wind_fields": [
+      {
+        "direction_deg": 270.0,
+        "speed_mps": 4.0,
+        "min_z_m": 20.0,
+        "max_z_m": 60.0,
+        "gust_factor": 1.2
+      },
+      {
+        "direction_deg": 315.0,
+        "speed_mps": 8.0,
+        "min_z_m": 60.0,
+        "max_z_m": 120.0,
+        "gust_factor": 1.4
+      }
+    ],
+    "battery": {
+      "capacity_wh": 5000.0,
+      "range_m": 90000.0,
+      "max_discharge_pct": 0.9
+    }
+  },
+  "optimization_stages": [
+    {
+      "margin_m": 0.5,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "objective": 3666.4727353712497,
+      "min_constraint": 0.24738822273182082,
+      "path_length_m": 682.6832536434337
+    },
+    {
+      "margin_m": 2.0,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "objective": 3666.5384585515635,
+      "min_constraint": -109.00334542460041,
+      "path_length_m": 682.683253689011
+    },
+    {
+      "margin_m": 5.0,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "objective": 3667.048877011089,
+      "min_constraint": -436.0033454246004,
+      "path_length_m": 682.683253689011
+    }
+  ],
+  "metrics": {
+    "coarse_astar": {
+      "path_length_m": 689.8540383713969,
+      "smoothness_sum_sq": 1313.9871350105857,
+      "max_speed_mps": 8.57068829387142,
+      "max_climb_mps": 2.8568960979571405,
+      "max_descent_mps": 3.3791762732841595,
+      "max_turn_deg": 35.73013607512874,
+      "min_clearance_m": -0.5283368388017777,
+      "flight_time_s": 81.71023497702109,
+      "no_fly_zone_violations": 0.0,
+      "max_gps_hdop": 4.5,
+      "max_wind_speed_mps": 8.0,
+      "battery_range_used_pct": 0.7665044870793298,
+      "terrain_clearance_min_m": 47.24379215762999
+    },
+    "initial_bspline": {
+      "path_length_m": 689.7304390796701,
+      "smoothness_sum_sq": 1315.1913935000607,
+      "max_speed_mps": 8.464478421537262,
+      "max_climb_mps": 2.8631096788238124,
+      "max_descent_mps": 3.4497506861595957,
+      "max_turn_deg": 36.5095130601004,
+      "min_clearance_m": -0.5174620963583436,
+      "flight_time_s": 81.71023497702109,
+      "no_fly_zone_violations": 0.0,
+      "max_gps_hdop": 4.5,
+      "max_wind_speed_mps": 8.0,
+      "battery_range_used_pct": 0.7663671545329667,
+      "terrain_clearance_min_m": 47.1893666718975
+    },
+    "optimized_sqp": {
+      "path_length_m": 682.683253689011,
+      "smoothness_sum_sq": 448.2336099844882,
+      "max_speed_mps": 8.555977908351847,
+      "max_climb_mps": 2.1637514310411183,
+      "max_descent_mps": 2.6552610531701992,
+      "max_turn_deg": 17.351138295505738,
+      "min_clearance_m": -4.038507964306881,
+      "flight_time_s": 81.71023497702109,
+      "no_fly_zone_violations": 0.0,
+      "max_gps_hdop": 4.5,
+      "max_wind_speed_mps": 8.0,
+      "battery_range_used_pct": 0.7585369485433456,
+      "terrain_clearance_min_m": 50.0
+    }
+  },
+  "optimized_waypoints": [
+    [
+      0.0,
+      0.0,
+      50.0
+    ],
+    [
+      23.30358943867978,
+      24.46951430456118,
+      57.015372178507704
+    ],
+    [
+      47.35890868727396,
+      48.234487041663805,
+      65.56999294182427
+    ],
+    [
+      70.92477277388251,
+      70.37289312484235,
+      74.41002483493604
+    ],
+    [
+      93.96265378528939,
+      92.31403461959775,
+      83.01684947900213
+    ],
+    [
+      118.21903888314014,
+      115.9582909488631,
+      89.21352795416645
+    ],
+    [
+      141.12080177297068,
+      140.41821973514675,
+      93.79427972931896
+    ],
+    [
+      164.098757895717,
+      164.9970548990819,
+      99.95080647353565
+    ],
+    [
+      187.24425981601064,
+      190.2167876642552,
+      106.35354832603268
+    ],
+    [
+      205.69028253133084,
+      219.4481293668559,
+      111.56538705453535
+    ],
+    [
+      231.40552891055154,
+      243.02409509387766,
+      113.75406202941323
+    ],
+    [
+      257.04538925673637,
+      266.2363434360214,
+      114.7414111534438
+    ],
+    [
+      282.63128476837625,
+      290.022336201163,
+      115.0731341374798
+    ],
+    [
+      308.9338516420571,
+      312.79556328463445,
+      114.80323985953673
+    ],
+    [
+      332.49285438582837,
+      337.67076662527927,
+      116.0699092136006
+    ],
+    [
+      351.4134673283503,
+      364.0340196170134,
+      116.29438485646587
+    ],
+    [
+      376.38925271872,
+      387.11829721691464,
+      115.78263759263876
+    ],
+    [
+      405.53428262663044,
+      402.67048604008636,
+      111.74123392032577
+    ],
+    [
+      435.77756553973137,
+      410.42815457171525,
+      101.55939077716555
+    ],
+    [
+      467.3768880620314,
+      415.2117404407418,
+      90.84810022899347
+    ],
+    [
+      500.0,
+      420.0,
+      80.0
+    ]
+  ],
+  "artifacts": {
+    "figure": "/Users/interstellar/Documents/data_analyse/path_planning/3_Dimensional_Q/results/three_dimensional/three_dimensional_path_planning.png",
+    "dashboard": "/Users/interstellar/Documents/data_analyse/path_planning/3_Dimensional_Q/results/three_dimensional/three_dimensional_dashboard.png",
+    "waypoints_csv": "/Users/interstellar/Documents/data_analyse/path_planning/3_Dimensional_Q/results/three_dimensional/three_dimensional_waypoints.csv",
+    "html_3d": "/Users/interstellar/Documents/data_analyse/path_planning/3_Dimensional_Q/results/three_dimensional/three_dimensional_3dvisualization.html",
+    "animation_gif": "/Users/interstellar/Documents/data_analyse/path_planning/3_Dimensional_Q/results/three_dimensional/three_dimensional_trajectory.gif",
+    "animation_mp4_status": "ffmpeg_not_found"
+  }
+}
